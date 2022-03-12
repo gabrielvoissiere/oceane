@@ -1,0 +1,40 @@
+// font-familly
+@font-face {
+    font-family: "Vogue";
+    src: url("../assets/fonts/Vogue.ttf");
+}
+
+@font-face {
+    font-family: "Bodoni";
+    src: url("../assets/fonts/BodoniFLF-Roman.ttf");
+}
+
+$title-font: "Vogue", sans-serif;
+
+// colors
+$primary-color: #ffffff;
+
+// font-size
+$title-h1: 7rem;
+$title-h2: 3.5rem;
+$title-h3: 2rem;
+
+$nav-text-size: 1.8rem;
+
+$text-size: 1.5rem;
+
+// margin 
+$medium-margin: 4vw;
+
+// frame behind images
+@mixin frame {
+    .frame-left {
+        border: 4px solid $primary-color;
+        width: 100%;
+        height: 75%;
+        position: absolute;
+        top: -8%;
+        left: -25%;
+        z-index: -1;
+    }
+}
