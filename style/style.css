@@ -40,11 +40,14 @@ input,
 textarea,
 button {
   margin: 0;
+  padding: 0;
+  outline: none;
 }
 
 body {
   width: 100vw;
   height: 100vh;
+  font-weight: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +63,111 @@ body {
           align-items: center;
   background-color: black;
   font-family: "Bodoni";
+}
+
+nav {
+  background-color: #ffffff;
+  width: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+}
+
+nav ul {
+  font-size: 1.6rem;
+  padding: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+nav ul li:nth-child(2) {
+  text-decoration: line-through;
+}
+
+nav ul li:nth-child(4) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  font-size: 2rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  width: 100vw;
+  height: 4vw;
+  position: fixed;
+  bottom: 0%;
+  background-color: #ffffff;
+}
+
+footer ul {
+  font-size: 1.6rem;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul li:nth-child(2) {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+footer ul li a {
+  color: black;
+  text-decoration: none;
 }
 
 .dark-filter {
@@ -100,64 +208,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-#home-page nav {
-  background-color: #ffffff;
-  width: 4vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-}
-
-#home-page nav ul {
-  font-size: 1.8rem;
-  padding: 0;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  list-style-type: none;
-  text-transform: uppercase;
-}
-
-#home-page nav ul li {
-  text-align: center;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
-}
-
-#home-page nav ul li:nth-child(2) {
-  text-decoration: line-through;
-}
-
-#home-page nav ul li:nth-child(4) {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-#home-page nav ul li a {
-  color: black;
-  text-decoration: none;
 }
 
 #home-page main {
@@ -239,7 +289,7 @@ body {
 
 #home-page main h3 {
   color: #ffffff;
-  margin-top: 4vw;
+  margin-top: 8vw;
   font-size: 2rem;
   text-transform: uppercase;
   position: relative;
@@ -253,5 +303,365 @@ body {
   position: absolute;
   left: -200%;
   top: 50%;
+}
+
+#home-page main #img-box {
+  width: 70%;
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8vw 0;
+}
+
+#home-page main #img-box img {
+  height: 100%;
+}
+
+#home-page main #img-box .img-box-child {
+  position: relative;
+}
+
+#home-page main #img-box .img-box-child #frame-left {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  top: -10%;
+  left: -12%;
+  z-index: -2;
+}
+
+#home-page main #img-box .img-box-child #frame-right {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  bottom: -10%;
+  right: -12%;
+  z-index: -2;
+}
+
+#contact-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#contact-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#contact-page main #presentation {
+  margin-top: 4vw;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact-page main #presentation #presentation-img-box {
+  width: 30%;
+  position: relative;
+}
+
+#contact-page main #presentation #presentation-img-box img {
+  width: 100%;
+}
+
+#contact-page main #presentation article {
+  width: 60%;
+  color: #ffffff;
+}
+
+#contact-page main #presentation article h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#contact-page main #presentation article p {
+  margin-top: 4vw;
+  font-size: 1.5rem;
+  position: relative;
+  background-color: black;
+  border: 10px solid black;
+}
+
+#contact-page main #presentation article p span {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  left: -6%;
+}
+
+#contact-page main h3 {
+  color: #ffffff;
+  margin-top: 4vw;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  width: 70%;
+  text-align: right;
+}
+
+#contact-page main h3 span {
+  background-color: #ffffff;
+  width: 294%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: -200%;
+  top: 50%;
+}
+
+#contact-page main form {
+  margin-top: 4vw;
+  margin-bottom: 8vw;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-page main form #infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4vw;
+}
+
+#contact-page main form #infos .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+}
+
+#contact-page main form #infos .input-box label {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1vh;
+  text-transform: uppercase;
+}
+
+#contact-page main form #infos .input-box input {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  width: 100%;
+}
+
+#contact-page main form label {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#contact-page main form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  caret-color: #ffffff;
+}
+
+#contact-page main form button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Bodoni';
+  margin-top: 2vw;
+}
+
+#cv-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#cv-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cv-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#cv-page main #cv {
+  margin-top: 4vw;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#cv-page main #cv #presentation-img-box {
+  width: 30%;
+  position: relative;
+}
+
+#cv-page main #cv #presentation-img-box img {
+  width: 100%;
+}
+
+#cv-page main #cv article {
+  width: 60%;
+  color: #ffffff;
+}
+
+#cv-page main #cv article h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#cv-page main #cv article p {
+  margin-top: 4vw;
+  font-size: 1.5rem;
+  position: relative;
+  background-color: black;
+  border: 10px solid black;
+}
+
+#cv-page main #cv article p span {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  z-index: -1;
+  bottom: -8%;
+  left: -6%;
+}
+
+#cv-page main h3 {
+  color: #ffffff;
+  margin-top: 8vw;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#cv-page main h3 span {
+  background-color: #ffffff;
+  width: 222%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: -200%;
+  top: 50%;
+}
+
+#cv-page main #img-box {
+  width: 70%;
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8vw 0;
+}
+
+#cv-page main #img-box img {
+  height: 100%;
+}
+
+#cv-page main #img-box .img-box-child {
+  position: relative;
+}
+
+#cv-page main #img-box .img-box-child #frame-left {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  top: -10%;
+  left: -12%;
+  z-index: -2;
+}
+
+#cv-page main #img-box .img-box-child #frame-right {
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  bottom: -10%;
+  right: -12%;
+  z-index: -2;
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,12 +19,18 @@ $title-h1: 7rem;
 $title-h2: 3.5rem;
 $title-h3: 2rem;
 
-$nav-text-size: 1.8rem;
+$nav-text-size: 1.6rem;
 
 $text-size: 1.5rem;
 
 // margin 
+$large-margin: 8vw;
 $medium-margin: 4vw;
+$small-margin: 2vw;
+
+// padding
+$small-padding: 2vw;
+
 
 // frame behind images
 @mixin frame {
