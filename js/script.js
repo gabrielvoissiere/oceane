@@ -2,7 +2,7 @@
 if (document.title === 'wait...') {
     // redirect to /pages/accueil.html after 5 seconds
     setTimeout(() => {
-        window.location.replace('../pages/accueil.html');
+        window.location.href = '../pages/accueil.html';
     }, 5000);
 }
 
