@@ -38,8 +38,7 @@ h6,
 body,
 input,
 textarea,
-button,
-video {
+button {
   margin: 0;
   padding: 0;
   outline: none;
@@ -56,15 +55,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
   font-family: "Bodoni";
-  color: #ffffff;
 }
 
 nav {
@@ -110,7 +108,6 @@ nav ul li {
           writing-mode: vertical-rl;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
-  color: black;
 }
 
 nav ul li:nth-child(2) {
@@ -128,40 +125,11 @@ nav ul li a {
   text-decoration: none;
 }
 
-main {
-  width: 96vw;
-  position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main h1 {
-  color: #ffffff;
-  font-size: 7rem;
-  font-family: "Vogue", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5vw;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 4vw;
-}
-
 footer {
   width: 100vw;
   height: 4vw;
   position: fixed;
   bottom: 0%;
-  color: black;
   background-color: #ffffff;
 }
 
@@ -236,7 +204,60 @@ footer ul li a {
   height: 90%;
 }
 
-#home-page #presentation {
+#custom-nav {
+  position: fixed;
+  width: 95%;
+  bottom: 5vw;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#custom-nav a {
+  text-decoration: line-through;
+  color: #ffffff;
+}
+
+#home-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#home-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#home-page main #presentation {
   margin-top: 4vw;
   width: 70%;
   display: -webkit-box;
@@ -247,26 +268,27 @@ footer ul li a {
           justify-content: space-between;
 }
 
-#home-page #presentation #presentation-img-box {
+#home-page main #presentation #presentation-img-box {
   width: 30%;
   position: relative;
 }
 
-#home-page #presentation #presentation-img-box img {
+#home-page main #presentation #presentation-img-box img {
   width: 100%;
 }
 
-#home-page #presentation article {
+#home-page main #presentation article {
   width: 60%;
+  color: #ffffff;
 }
 
-#home-page #presentation article h2 {
+#home-page main #presentation article h2 {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-#home-page #presentation article p {
+#home-page main #presentation article p {
   margin-top: 4vw;
   font-size: 1.5rem;
   position: relative;
@@ -274,7 +296,7 @@ footer ul li a {
   border: 10px solid black;
 }
 
-#home-page #presentation article p span {
+#home-page main #presentation article p span {
   border: 4px solid #ffffff;
   width: 100%;
   height: 85%;
@@ -284,14 +306,15 @@ footer ul li a {
   left: -6%;
 }
 
-#home-page #presentation h3 {
+#home-page main h3 {
+  color: #ffffff;
   margin-top: 8vw;
   font-size: 2rem;
   text-transform: uppercase;
   position: relative;
 }
 
-#home-page #presentation h3 span {
+#home-page main h3 span {
   background-color: #ffffff;
   width: 222%;
   height: 1px;
@@ -301,7 +324,7 @@ footer ul li a {
   top: 50%;
 }
 
-#home-page #presentation #img-box {
+#home-page main #img-box {
   width: 70%;
   height: 35vh;
   display: -webkit-box;
@@ -313,15 +336,15 @@ footer ul li a {
   margin: 8vw 0;
 }
 
-#home-page #presentation #img-box img {
+#home-page main #img-box img {
   height: 100%;
 }
 
-#home-page #presentation #img-box .img-box-child {
+#home-page main #img-box .img-box-child {
   position: relative;
 }
 
-#home-page #presentation #img-box .img-box-child #frame-left {
+#home-page main #img-box .img-box-child #frame-left {
   border: 4px solid #ffffff;
   width: 100%;
   height: 95%;
@@ -331,7 +354,7 @@ footer ul li a {
   z-index: -2;
 }
 
-#home-page #presentation #img-box .img-box-child #frame-right {
+#home-page main #img-box .img-box-child #frame-right {
   border: 4px solid #ffffff;
   width: 100%;
   height: 95%;
@@ -341,7 +364,41 @@ footer ul li a {
   z-index: -2;
 }
 
-#contact-page #presentation {
+#contact-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#contact-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#contact-page main #presentation {
   margin-top: 4vw;
   width: 70%;
   display: -webkit-box;
@@ -352,26 +409,27 @@ footer ul li a {
           justify-content: space-between;
 }
 
-#contact-page #presentation #presentation-img-box {
+#contact-page main #presentation #presentation-img-box {
   width: 30%;
   position: relative;
 }
 
-#contact-page #presentation #presentation-img-box img {
+#contact-page main #presentation #presentation-img-box img {
   width: 100%;
 }
 
-#contact-page #presentation article {
+#contact-page main #presentation article {
   width: 60%;
+  color: #ffffff;
 }
 
-#contact-page #presentation article h2 {
+#contact-page main #presentation article h2 {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-#contact-page #presentation article p {
+#contact-page main #presentation article p {
   margin-top: 4vw;
   font-size: 1.5rem;
   position: relative;
@@ -379,7 +437,7 @@ footer ul li a {
   border: 10px solid black;
 }
 
-#contact-page #presentation article p span {
+#contact-page main #presentation article p span {
   border: 4px solid #ffffff;
   width: 100%;
   height: 85%;
@@ -389,7 +447,8 @@ footer ul li a {
   left: -6%;
 }
 
-#contact-page section + h3 {
+#contact-page main h3 {
+  color: #ffffff;
   margin-top: 4vw;
   font-size: 2rem;
   text-transform: uppercase;
@@ -398,7 +457,7 @@ footer ul li a {
   text-align: right;
 }
 
-#contact-page section + h3 span {
+#contact-page main h3 span {
   background-color: #ffffff;
   width: 294%;
   height: 1px;
@@ -408,7 +467,7 @@ footer ul li a {
   top: 50%;
 }
 
-#contact-page form {
+#contact-page main form {
   margin-top: 4vw;
   margin-bottom: 8vw;
   width: 50%;
@@ -424,7 +483,7 @@ footer ul li a {
           align-items: center;
 }
 
-#contact-page form #infos {
+#contact-page main form #infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,7 +494,7 @@ footer ul li a {
   margin-bottom: 4vw;
 }
 
-#contact-page form #infos .input-box {
+#contact-page main form #infos .input-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,25 +505,27 @@ footer ul li a {
   width: 45%;
 }
 
-#contact-page form #infos .input-box label {
+#contact-page main form #infos .input-box label {
+  color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 1vh;
   text-transform: uppercase;
 }
 
-#contact-page form #infos .input-box input {
+#contact-page main form #infos .input-box input {
   border: none;
   border-bottom: 2px solid #ffffff;
   background-color: transparent;
   width: 100%;
 }
 
-#contact-page form label {
+#contact-page main form label {
+  color: #ffffff;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-#contact-page form textarea {
+#contact-page main form textarea {
   width: 100%;
   border: none;
   border-bottom: 2px solid #ffffff;
@@ -472,7 +533,7 @@ footer ul li a {
   caret-color: #ffffff;
 }
 
-#contact-page form button {
+#contact-page main form button {
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -482,7 +543,41 @@ footer ul li a {
   margin-top: 2vw;
 }
 
-#cv-page #cv {
+#cv-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#cv-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cv-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#cv-page main #cv {
   margin-top: 4vw;
   margin-bottom: 8vw;
   width: 50%;
@@ -495,11 +590,11 @@ footer ul li a {
           justify-content: space-between;
 }
 
-#cv-page #cv video {
+#cv-page main #cv video {
   width: 50%;
 }
 
-#cv-page #cv div {
+#cv-page main #cv div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,17 +607,468 @@ footer ul li a {
           justify-content: flex-start;
 }
 
-#cv-page #cv div h2 {
+#cv-page main #cv div h2 {
   text-transform: uppercase;
   font-family: "Vogue", sans-serif;
   font-size: 1.5rem;
   text-decoration: line-through;
 }
 
-#cv-page #cv div a {
+#cv-page main #cv div a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
   margin-top: 2vw;
+}
+
+#namana-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#namana-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#namana-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#namana-page main #namana {
+  color: #ffffff;
+  margin-top: 2vw;
+  margin-bottom: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  height: 50vh;
+}
+
+#namana-page main #namana div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 30%;
+}
+
+#namana-page main #namana div:first-child h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+#namana-page main #namana div:first-child p {
+  font-size: 1.5rem;
+  margin-top: 2vw;
+}
+
+#namana-page main #namana div:first-child p span {
+  text-transform: uppercase;
+}
+
+#namana-page main #namana div:first-child img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#namana-page main #namana div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+#namana-page main #namana div:last-child img {
+  width: 48%;
+}
+
+#photoshop-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#photoshop-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#photoshop-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#photoshop-page main #photoshop {
+  color: #ffffff;
+  margin-top: 2vw;
+  margin-bottom: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  height: 50vh;
+}
+
+#photoshop-page main #photoshop div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  position: relative;
+  width: 30%;
+}
+
+#photoshop-page main #photoshop div:first-child h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: normal;
+  text-decoration: line-through;
+  position: absolute;
+  top: 0;
+}
+
+#photoshop-page main #photoshop div:first-child p {
+  font-size: 1.5rem;
+  margin-top: 2vw;
+}
+
+#photoshop-page main #photoshop div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 65%;
+}
+
+#photoshop-page main #photoshop div:last-child img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#workshopMely-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#workshopMely-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#workshopMely-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#workshopMely-page main #workshopMely {
+  color: #ffffff;
+  margin-top: 2vw;
+  margin-bottom: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+#workshopMely-page main #workshopMely h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+#workshopMely-page main #workshopMely p {
+  font-size: 1.5rem;
+}
+
+#workshopMely-page main #workshopMely img {
+  margin-top: 2vw;
+}
+
+#workshopMely-page main #workshopMely div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2vw;
+}
+
+#workshopMely-page main #workshopMely div video {
+  width: 25%;
+}
+
+#workshopMely-page main #workshopMely div img {
+  width: 70%;
+  height: 100%;
+  margin: 0;
+}
+
+#workshopNewsletter-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#workshopNewsletter-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#workshopNewsletter-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#workshopNewsletter-page main #workshopNewsletter {
+  color: #ffffff;
+  margin-top: 2vw;
+  margin-bottom: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+#workshopNewsletter-page main #workshopNewsletter h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+#workshopNewsletter-page main #workshopNewsletter p {
+  font-size: 1.5rem;
+}
+
+#workshopNewsletter-page main #workshopNewsletter img {
+  margin-top: 2vw;
+}
+
+#workshopNewsletter-page main #workshopNewsletter img:last-child {
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#processCreatif-page {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#processCreatif-page main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#processCreatif-page main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
+#processCreatif-page main #processCreatif {
+  color: #ffffff;
+  margin-top: 2vw;
+  margin-bottom: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+#processCreatif-page main #processCreatif h2 {
+  font-family: "Vogue", sans-serif;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+#processCreatif-page main #processCreatif p {
+  font-size: 1.5rem;
+}
+
+#processCreatif-page main #processCreatif img {
+  margin-top: 2vw;
+}
+
+#processCreatif-page main #processCreatif img:last-child {
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#processCreatif-page main #processCreatif #imgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#processCreatif-page main #processCreatif #imgBox #logo {
+  width: 40%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0;
+}
+
+#processCreatif-page main #processCreatif #imgBox div {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#processCreatif-page main #processCreatif #imgBox div img {
+  width: 100%;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
