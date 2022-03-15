@@ -38,7 +38,8 @@ h6,
 body,
 input,
 textarea,
-button {
+button,
+video {
   margin: 0;
   padding: 0;
   outline: none;
@@ -55,14 +56,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
   font-family: "Bodoni";
+  color: #ffffff;
 }
 
 nav {
@@ -108,6 +110,7 @@ nav ul li {
           writing-mode: vertical-rl;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
+  color: black;
 }
 
 nav ul li:nth-child(2) {
@@ -125,11 +128,40 @@ nav ul li a {
   text-decoration: none;
 }
 
+main {
+  width: 96vw;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main h1 {
+  color: #ffffff;
+  font-size: 7rem;
+  font-family: "Vogue", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 4vw;
+}
+
 footer {
   width: 100vw;
   height: 4vw;
   position: fixed;
   bottom: 0%;
+  color: black;
   background-color: #ffffff;
 }
 
@@ -204,41 +236,7 @@ footer ul li a {
   height: 90%;
 }
 
-#home-page {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-#home-page main {
-  width: 96vw;
-  position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#home-page main h1 {
-  color: #ffffff;
-  font-size: 7rem;
-  font-family: "Vogue", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5vw;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 4vw;
-}
-
-#home-page main #presentation {
+#home-page #presentation {
   margin-top: 4vw;
   width: 70%;
   display: -webkit-box;
@@ -249,27 +247,26 @@ footer ul li a {
           justify-content: space-between;
 }
 
-#home-page main #presentation #presentation-img-box {
+#home-page #presentation #presentation-img-box {
   width: 30%;
   position: relative;
 }
 
-#home-page main #presentation #presentation-img-box img {
+#home-page #presentation #presentation-img-box img {
   width: 100%;
 }
 
-#home-page main #presentation article {
+#home-page #presentation article {
   width: 60%;
-  color: #ffffff;
 }
 
-#home-page main #presentation article h2 {
+#home-page #presentation article h2 {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-#home-page main #presentation article p {
+#home-page #presentation article p {
   margin-top: 4vw;
   font-size: 1.5rem;
   position: relative;
@@ -277,7 +274,7 @@ footer ul li a {
   border: 10px solid black;
 }
 
-#home-page main #presentation article p span {
+#home-page #presentation article p span {
   border: 4px solid #ffffff;
   width: 100%;
   height: 85%;
@@ -287,15 +284,14 @@ footer ul li a {
   left: -6%;
 }
 
-#home-page main h3 {
-  color: #ffffff;
+#home-page #presentation h3 {
   margin-top: 8vw;
   font-size: 2rem;
   text-transform: uppercase;
   position: relative;
 }
 
-#home-page main h3 span {
+#home-page #presentation h3 span {
   background-color: #ffffff;
   width: 222%;
   height: 1px;
@@ -305,7 +301,7 @@ footer ul li a {
   top: 50%;
 }
 
-#home-page main #img-box {
+#home-page #presentation #img-box {
   width: 70%;
   height: 35vh;
   display: -webkit-box;
@@ -317,15 +313,15 @@ footer ul li a {
   margin: 8vw 0;
 }
 
-#home-page main #img-box img {
+#home-page #presentation #img-box img {
   height: 100%;
 }
 
-#home-page main #img-box .img-box-child {
+#home-page #presentation #img-box .img-box-child {
   position: relative;
 }
 
-#home-page main #img-box .img-box-child #frame-left {
+#home-page #presentation #img-box .img-box-child #frame-left {
   border: 4px solid #ffffff;
   width: 100%;
   height: 95%;
@@ -335,7 +331,7 @@ footer ul li a {
   z-index: -2;
 }
 
-#home-page main #img-box .img-box-child #frame-right {
+#home-page #presentation #img-box .img-box-child #frame-right {
   border: 4px solid #ffffff;
   width: 100%;
   height: 95%;
@@ -345,41 +341,7 @@ footer ul li a {
   z-index: -2;
 }
 
-#contact-page {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-#contact-page main {
-  width: 96vw;
-  position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#contact-page main h1 {
-  color: #ffffff;
-  font-size: 7rem;
-  font-family: "Vogue", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5vw;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 4vw;
-}
-
-#contact-page main #presentation {
+#contact-page #presentation {
   margin-top: 4vw;
   width: 70%;
   display: -webkit-box;
@@ -390,27 +352,26 @@ footer ul li a {
           justify-content: space-between;
 }
 
-#contact-page main #presentation #presentation-img-box {
+#contact-page #presentation #presentation-img-box {
   width: 30%;
   position: relative;
 }
 
-#contact-page main #presentation #presentation-img-box img {
+#contact-page #presentation #presentation-img-box img {
   width: 100%;
 }
 
-#contact-page main #presentation article {
+#contact-page #presentation article {
   width: 60%;
-  color: #ffffff;
 }
 
-#contact-page main #presentation article h2 {
+#contact-page #presentation article h2 {
   font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-#contact-page main #presentation article p {
+#contact-page #presentation article p {
   margin-top: 4vw;
   font-size: 1.5rem;
   position: relative;
@@ -418,7 +379,7 @@ footer ul li a {
   border: 10px solid black;
 }
 
-#contact-page main #presentation article p span {
+#contact-page #presentation article p span {
   border: 4px solid #ffffff;
   width: 100%;
   height: 85%;
@@ -428,8 +389,7 @@ footer ul li a {
   left: -6%;
 }
 
-#contact-page main h3 {
-  color: #ffffff;
+#contact-page section + h3 {
   margin-top: 4vw;
   font-size: 2rem;
   text-transform: uppercase;
@@ -438,7 +398,7 @@ footer ul li a {
   text-align: right;
 }
 
-#contact-page main h3 span {
+#contact-page section + h3 span {
   background-color: #ffffff;
   width: 294%;
   height: 1px;
@@ -448,7 +408,7 @@ footer ul li a {
   top: 50%;
 }
 
-#contact-page main form {
+#contact-page form {
   margin-top: 4vw;
   margin-bottom: 8vw;
   width: 50%;
@@ -464,7 +424,7 @@ footer ul li a {
           align-items: center;
 }
 
-#contact-page main form #infos {
+#contact-page form #infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,7 +435,7 @@ footer ul li a {
   margin-bottom: 4vw;
 }
 
-#contact-page main form #infos .input-box {
+#contact-page form #infos .input-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,27 +446,25 @@ footer ul li a {
   width: 45%;
 }
 
-#contact-page main form #infos .input-box label {
-  color: #ffffff;
+#contact-page form #infos .input-box label {
   font-size: 1.5rem;
   margin-bottom: 1vh;
   text-transform: uppercase;
 }
 
-#contact-page main form #infos .input-box input {
+#contact-page form #infos .input-box input {
   border: none;
   border-bottom: 2px solid #ffffff;
   background-color: transparent;
   width: 100%;
 }
 
-#contact-page main form label {
-  color: #ffffff;
+#contact-page form label {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-#contact-page main form textarea {
+#contact-page form textarea {
   width: 100%;
   border: none;
   border-bottom: 2px solid #ffffff;
@@ -514,7 +472,7 @@ footer ul li a {
   caret-color: #ffffff;
 }
 
-#contact-page main form button {
+#contact-page form button {
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -524,16 +482,24 @@ footer ul li a {
   margin-top: 2vw;
 }
 
-#cv-page {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+#cv-page #cv {
+  margin-top: 4vw;
+  margin-bottom: 8vw;
+  width: 50%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#cv-page main {
-  width: 96vw;
-  position: absolute;
-  right: 0;
+#cv-page #cv video {
+  width: 50%;
+}
+
+#cv-page #cv div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,127 +507,22 @@ footer ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-#cv-page main h1 {
-  color: #ffffff;
-  font-size: 7rem;
+#cv-page #cv div h2 {
+  text-transform: uppercase;
   font-family: "Vogue", sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5vw;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 4vw;
-}
-
-#cv-page main #cv {
-  margin-top: 4vw;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#cv-page main #cv #presentation-img-box {
-  width: 30%;
-  position: relative;
-}
-
-#cv-page main #cv #presentation-img-box img {
-  width: 100%;
-}
-
-#cv-page main #cv article {
-  width: 60%;
-  color: #ffffff;
-}
-
-#cv-page main #cv article h2 {
-  font-size: 3.5rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#cv-page main #cv article p {
-  margin-top: 4vw;
   font-size: 1.5rem;
-  position: relative;
-  background-color: black;
-  border: 10px solid black;
+  text-decoration: line-through;
 }
 
-#cv-page main #cv article p span {
-  border: 4px solid #ffffff;
-  width: 100%;
-  height: 85%;
-  position: absolute;
-  z-index: -1;
-  bottom: -8%;
-  left: -6%;
-}
-
-#cv-page main h3 {
+#cv-page #cv div a {
   color: #ffffff;
-  margin-top: 8vw;
-  font-size: 2rem;
-  text-transform: uppercase;
-  position: relative;
-}
-
-#cv-page main h3 span {
-  background-color: #ffffff;
-  width: 222%;
-  height: 1px;
-  display: block;
-  position: absolute;
-  left: -200%;
-  top: 50%;
-}
-
-#cv-page main #img-box {
-  width: 70%;
-  height: 35vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 8vw 0;
-}
-
-#cv-page main #img-box img {
-  height: 100%;
-}
-
-#cv-page main #img-box .img-box-child {
-  position: relative;
-}
-
-#cv-page main #img-box .img-box-child #frame-left {
-  border: 4px solid #ffffff;
-  width: 100%;
-  height: 95%;
-  position: absolute;
-  top: -10%;
-  left: -12%;
-  z-index: -2;
-}
-
-#cv-page main #img-box .img-box-child #frame-right {
-  border: 4px solid #ffffff;
-  width: 100%;
-  height: 95%;
-  position: absolute;
-  bottom: -10%;
-  right: -12%;
-  z-index: -2;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-top: 2vw;
 }
 /*# sourceMappingURL=style.css.map */

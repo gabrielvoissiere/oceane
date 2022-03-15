@@ -24,7 +24,8 @@ h6,
 body,
 input,
 textarea,
-button {
+button,
+video {
     margin: 0;
     padding: 0;
     outline: none;
@@ -36,10 +37,11 @@ body {
     font-weight: normal;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: black;
     font-family: "Bodoni";
+    color: $primary-color;
 }
 
 // navigation
@@ -70,6 +72,7 @@ nav {
             text-align: center;
             writing-mode: vertical-rl;
             transform: rotateZ(180deg);
+            color: black;
 
             &:nth-child(2) {
                 text-decoration: line-through;
@@ -89,12 +92,36 @@ nav {
     }
 }
 
+// main
+main {
+    width: 96vw;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // title
+    h1 {
+        color: $primary-color;
+        font-size: $title-h1;
+        font-family: $title-font;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5vw;
+        font-weight: normal;
+        text-align: center;
+        margin-top: $medium-margin;
+    }
+}
+
 // footer
 footer {
     width: 100vw;
     height: 4vw;
     position: fixed;
     bottom: 0%;
+    color: black;
     background-color: $primary-color;
 
     // liste of links
@@ -163,77 +190,51 @@ footer {
 
 // home page
 #home-page {
-    justify-content: flex-start;
 
-    // main
-    main {
-        width: 96vw;
-        position: absolute;
-        right: 0;
+    #presentation {
+        margin-top: $medium-margin;
+        width: 70%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
-        // title
-        h1 {
-            color: $primary-color;
-            font-size: $title-h1;
-            font-family: $title-font;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5vw;
-            font-weight: normal;
-            text-align: center;
-            margin-top: $medium-margin;
+        #presentation-img-box {
+            width: 30%;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
         }
 
-        #presentation {
-            margin-top: $medium-margin;
-            width: 70%;
-            display: flex;
-            justify-content: space-between;
+        article {
+            width: 60%;
 
-            #presentation-img-box {
-                width: 30%;
-                position: relative;
-
-                img {
-                    width: 100%;
-                }
+            h2 {
+                font-size: $title-h2;
+                text-align: center;
+                text-transform: uppercase;
             }
 
-            article {
-                width: 60%;
-                color: $primary-color;
+            p {
+                margin-top: $medium-margin;
+                font-size: $text-size;
+                position: relative;
+                background-color: black;
+                border: 10px solid black;
 
-                h2 {
-                    font-size: $title-h2;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-
-                p {
-                    margin-top: $medium-margin;
-                    font-size: $text-size;
-                    position: relative;
-                    background-color: black;
-                    border: 10px solid black;
-
-                    span {
-                        border: 4px solid $primary-color;
-                        width: 100%;
-                        height: 85%;
-                        position: absolute;
-                        z-index: -1;
-                        bottom: -8%;
-                        left: -6%;
-                    }
+                span {
+                    border: 4px solid $primary-color;
+                    width: 100%;
+                    height: 85%;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -8%;
+                    left: -6%;
                 }
             }
         }
 
         h3 {
-            color: $primary-color;
             margin-top: $large-margin;
             font-size: $title-h3;
             text-transform: uppercase;
@@ -290,153 +291,125 @@ footer {
 
 // contact page
 #contact-page {
-    justify-content: flex-start;
 
-    // main
-    main {
-        width: 96vw;
-        position: absolute;
-        right: 0;
+    #presentation {
+        margin-top: $medium-margin;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+
+        #presentation-img-box {
+            width: 30%;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        article {
+            width: 60%;
+
+            h2 {
+                font-size: $title-h2;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            p {
+                margin-top: $medium-margin;
+                font-size: $text-size;
+                position: relative;
+                background-color: black;
+                border: 10px solid black;
+
+                span {
+                    border: 4px solid $primary-color;
+                    width: 100%;
+                    height: 85%;
+                    position: absolute;
+                    z-index: -1;
+                    top: -8%;
+                    left: -6%;
+                }
+            }
+        }
+    }
+
+    section+h3 {
+        margin-top: $medium-margin;
+        font-size: $title-h3;
+        text-transform: uppercase;
+        position: relative;
+        width: 70%;
+        text-align: right;
+
+        span {
+            background-color: $primary-color;
+            width: 294%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            left: -200%;
+            top: 50%;
+        }
+    }
+
+    form {
+        margin-top: $medium-margin;
+        margin-bottom: $large-margin;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        // title
-        h1 {
-            color: $primary-color;
-            font-size: $title-h1;
-            font-family: $title-font;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5vw;
-            font-weight: normal;
-            text-align: center;
-            margin-top: $medium-margin;
-        }
-
-        #presentation {
-            margin-top: $medium-margin;
-            width: 70%;
+        #infos {
             display: flex;
             justify-content: space-between;
+            width: 100%;
+            margin-bottom: $medium-margin;
 
-            #presentation-img-box {
-                width: 30%;
-                position: relative;
+            .input-box {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
 
-                img {
-                    width: 100%;
-                }
-            }
-
-            article {
-                width: 60%;
-                color: $primary-color;
-
-                h2 {
-                    font-size: $title-h2;
-                    text-align: center;
+                label {
+                    font-size: $text-size;
+                    margin-bottom: 1vh;
                     text-transform: uppercase;
                 }
 
-                p {
-                    margin-top: $medium-margin;
-                    font-size: $text-size;
-                    position: relative;
-                    background-color: black;
-                    border: 10px solid black;
-
-                    span {
-                        border: 4px solid $primary-color;
-                        width: 100%;
-                        height: 85%;
-                        position: absolute;
-                        z-index: -1;
-                        top: -8%;
-                        left: -6%;
-                    }
+                input {
+                    border: none;
+                    border-bottom: 2px solid $primary-color;
+                    background-color: transparent;
+                    width: 100%;
                 }
             }
         }
 
-        h3 {
-            color: $primary-color;
-            margin-top: $medium-margin;
-            font-size: $title-h3;
+        label {
+            font-size: $text-size;
             text-transform: uppercase;
-            position: relative;
-            width: 70%;
-            text-align: right;
-
-            span {
-                background-color: $primary-color;
-                width: 294%;
-                height: 1px;
-                display: block;
-                position: absolute;
-                left: -200%;
-                top: 50%;
-            }
         }
 
-        form {
-            margin-top: $medium-margin;
-            margin-bottom: $large-margin;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            background-color: transparent;
+            caret-color: $primary-color;
+        }
 
-            #infos {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                margin-bottom: $medium-margin;
-
-                .input-box {
-                    display: flex;
-                    flex-direction: column;
-                    width: 45%;
-    
-                    label {
-                        color: $primary-color;
-                        font-size: $text-size;
-                        margin-bottom: 1vh;
-                        text-transform: uppercase;
-                    }
-
-                    input {
-                        border: none;
-                        border-bottom: 2px solid $primary-color;
-                        background-color: transparent;
-                        width: 100%;
-                    }
-                }
-            }
-
-            label {
-                color: $primary-color;
-                font-size: $text-size;
-                text-transform: uppercase;
-            }
-            
-            textarea {
-                width: 100%;
-                border: none;
-                border-bottom: 2px solid $primary-color;
-                background-color: transparent;
-                caret-color: $primary-color;
-            }
-
-            button {
-                color: $primary-color;
-                background-color: transparent;
-                border: none;
-                text-transform: uppercase;
-                font-size: $text-size;
-                font-family: 'Bodoni';
-                margin-top: $small-margin;
-            }
+        button {
+            color: $primary-color;
+            background-color: transparent;
+            border: none;
+            text-transform: uppercase;
+            font-size: $text-size;
+            font-family: 'Bodoni';
+            margin-top: $small-margin;
         }
     }
 }
@@ -445,126 +418,36 @@ footer {
 
 // home page
 #cv-page {
-    justify-content: flex-start;
 
-    // main
-    main {
-        width: 96vw;
-        position: absolute;
-        right: 0;
+    #cv {
+        margin-top: $medium-margin;
+        margin-bottom: $large-margin;
+        width: 50%;
+        height: 80vh;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
-        // title
-        h1 {
-            color: $primary-color;
-            font-size: $title-h1;
-            font-family: $title-font;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5vw;
-            font-weight: normal;
-            text-align: center;
-            margin-top: $medium-margin;
+        video {
+            width: 50%;
         }
 
-        #cv {
-            margin-top: $medium-margin;
-            width: 70%;
+        div {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: flex-start;
 
-            #presentation-img-box {
-                width: 30%;
-                position: relative;
-
-                img {
-                    width: 100%;
-                }
+            h2 {
+                text-transform: uppercase;
+                font-family: $title-font;
+                font-size: $text-size;
+                text-decoration: line-through;
             }
 
-            article {
-                width: 60%;
+            a {
                 color: $primary-color;
-
-                h2 {
-                    font-size: $title-h2;
-                    text-align: center;
-                    text-transform: uppercase;
-                }
-
-                p {
-                    margin-top: $medium-margin;
-                    font-size: $text-size;
-                    position: relative;
-                    background-color: black;
-                    border: 10px solid black;
-
-                    span {
-                        border: 4px solid $primary-color;
-                        width: 100%;
-                        height: 85%;
-                        position: absolute;
-                        z-index: -1;
-                        bottom: -8%;
-                        left: -6%;
-                    }
-                }
-            }
-        }
-
-        h3 {
-            color: $primary-color;
-            margin-top: $large-margin;
-            font-size: $title-h3;
-            text-transform: uppercase;
-            position: relative;
-
-            span {
-                background-color: $primary-color;
-                width: 222%;
-                height: 1px;
-                display: block;
-                position: absolute;
-                left: -200%;
-                top: 50%;
-            }
-        }
-
-        #img-box {
-            width: 70%;
-            height: 35vh;
-            display: flex;
-            justify-content: space-between;
-            margin: $large-margin 0;
-
-            img {
-                height: 100%;
-            }
-
-            .img-box-child {
-                position: relative;
-
-                #frame-left {
-                    border: 4px solid $primary-color;
-                    width: 100%;
-                    height: 95%;
-                    position: absolute;
-                    top: -10%;
-                    left: -12%;
-                    z-index: -2;
-                }
-
-                #frame-right {
-                    border: 4px solid $primary-color;
-                    width: 100%;
-                    height: 95%;
-                    position: absolute;
-                    bottom: -10%;
-                    right: -12%;
-                    z-index: -2;
-                }
+                text-decoration: none;
+                font-size: $text-size;
+                margin-top: $small-margin;
             }
         }
     }
