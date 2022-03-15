@@ -396,7 +396,6 @@ footer {
 
         form {
             margin-top: $medium-margin;
-            margin-bottom: $large-margin;
             width: 50%;
             display: flex;
             flex-direction: column;
@@ -425,6 +424,8 @@ footer {
                         border-bottom: 2px solid $primary-color;
                         background-color: transparent;
                         width: 100%;
+                        caret-color: $primary-color;
+                        color: $primary-color;
                     }
                 }
             }
@@ -441,17 +442,19 @@ footer {
                 border-bottom: 2px solid $primary-color;
                 background-color: transparent;
                 caret-color: $primary-color;
-            }
-
-            button {
                 color: $primary-color;
-                background-color: transparent;
-                border: none;
-                text-transform: uppercase;
-                font-size: $text-size;
-                font-family: 'Bodoni';
-                margin-top: $small-margin;
             }
+        }
+
+        button {
+            color: $primary-color;
+            background-color: transparent;
+            border: none;
+            text-transform: uppercase;
+            font-size: $text-size;
+            font-family: 'Bodoni';
+            margin-top: $small-margin;
+            margin-bottom: $large-margin;
         }
     }
 }

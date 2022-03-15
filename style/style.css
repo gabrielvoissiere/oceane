@@ -469,7 +469,6 @@ footer ul li a {
 
 #contact-page main form {
   margin-top: 4vw;
-  margin-bottom: 8vw;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,6 +516,8 @@ footer ul li a {
   border-bottom: 2px solid #ffffff;
   background-color: transparent;
   width: 100%;
+  caret-color: #ffffff;
+  color: #ffffff;
 }
 
 #contact-page main form label {
@@ -531,9 +532,10 @@ footer ul li a {
   border-bottom: 2px solid #ffffff;
   background-color: transparent;
   caret-color: #ffffff;
+  color: #ffffff;
 }
 
-#contact-page main form button {
+#contact-page main button {
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -541,6 +543,7 @@ footer ul li a {
   font-size: 1.5rem;
   font-family: 'Bodoni';
   margin-top: 2vw;
+  margin-bottom: 8vw;
 }
 
 #cv-page {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" type="image/png" href="../assets/images/presentation-img.png" />
     <script src="https://kit.fontawesome.com/d55e797bfb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <title>Accueil</title>
 </head>
 
@@ -72,9 +73,9 @@
                 <label for="msg">rédigez votre message ici ...</label>
                 <textarea name="msg" id="msg" cols="100" rows="10"></textarea>
             </div>
-
-            <button>envoyer</button>
         </form>
+
+        <button id="sendBtn">envoyer</button>
 
     </main>
 
@@ -85,6 +86,8 @@
             <li><a href="./contacts.html">me contacter</a></li>
         </ul>
     </footer>
+
+    <script src="../js/email.js"></script>
 </body>
 
 </html>
